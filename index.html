@@ -196,7 +196,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
        (function(){
-          emailjs.init("YOUR_USER_ID");
+          emailjs.init("TEJ3_kPECBsD4mYyS");
        })();
     </script>
     <!-- ----- MAIN JS ----- -->
@@ -207,8 +207,8 @@
             event.preventDefault();
 
             // These IDs are obtained from your EmailJS dashboard
-            const serviceID = 'YOUR_SERVICE_ID';
-            const templateID = 'YOUR_TEMPLATE_ID';
+            const serviceID = 'contact_service';
+            const templateID = 'contact_form';
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
