@@ -1,8 +1,5 @@
 // assets/js/email.js
-function sendMail() {
-    // Prevent the default form submission
-    event.preventDefault();
-
+function sendMail()
     // Get values from the form
     let params = {
         name: document.getElementById('name').value,
@@ -11,7 +8,7 @@ function sendMail() {
     };
 
     // Send email using EmailJS
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+    emailjs.send("contact_service", "contact_form", params)
         .then(function(response) {
             alert("Email Successfully Sent");
             console.log("SUCCESS!", response.status, response.text);
