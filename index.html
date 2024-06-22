@@ -206,21 +206,28 @@
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
     <script>
-        // EmailJS integration
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+    // EmailJS integration
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-            // These IDs are obtained from your EmailJS dashboard
-            const serviceID = 'contact_service';
-            const templateID = 'contact_form';
+        // These IDs are obtained from your EmailJS dashboard
+        const serviceID = 'contact_service';
+        const templateID = 'contact_form';
 
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    alert('Email sent successfully!');
-                }, (err) => {
-                    alert(JSON.stringify(err));
-                });
-        });
-    </script>
+        // Prepare the template parameters with user's name and email
+        const templateParams = {
+            userName: document.getElementById('user_name').value, // Assuming you have an input field with id 'user_name'
+            userEmail: document.getElementById('user_email').value, // Assuming you have an input field with id 'user_email'
+            message: document.getElementById('message').value // Assuming you have an input field with id 'message'
+        };
+
+        emailjs.send(serviceID, templateID, templateParams)
+            .then(() => {
+                alert('Email sent successfully!');
+            }, (err) => {
+                alert(JSON.stringify(err));
+            });
+    });
+</script>
 </body>
 </html>
