@@ -50,19 +50,23 @@
                         <span>Benet Benson</span>
                     </div>
                     <div class="featured-name">
-                        <p>I'm a <span class="typedText"></span></p>
+                        <p>I'm <span class="typedText"></span></p>
                     </div>
                     <div class="featured-text-info">
                         <p>Experienced frontend developer with a passion for creating visually stunning
-                            and user-friendly websites. If youre looking to build your brand, youve come to the right place.
+                            and user-friendly websites. If you're looking to build your brand, you've come to the right place.
                         </p>
                     </div>
                     <div class="featured-text-btn">
                         <button class="btn blue-btn">Hire Me</button>
                     </div>
                     <div class="social_icons">
-                        <div class="icon"><i class="uil uil-instagram"></i></div>
-                        <div class="icon"><i class="uil uil-github-alt"></i></div>
+                        <div class="icon">
+                            <a href="https://www.instagram.com/kyogrq/" target="_blank"><i class="uil uil-instagram"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank"><i class="uil uil-github-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="featured-image">
@@ -144,8 +148,8 @@
                         <form id="contact-form">
                             <div class="form-control">
                                 <div class="form-inputs">
-                                    <input type="text" class="input-field" placeholder="Name" name="name" required>
-                                    <input type="email" class="input-field" placeholder="Email" name="email" required>
+                                    <input type="text" class="input-field" placeholder="Name" name="user_name" required>
+                                    <input type="email" class="input-field" placeholder="Email" name="user_email" required>
                                 </div>
                                 <div class="text-area">
                                     <textarea placeholder="Message" name="message" required></textarea>
@@ -179,8 +183,8 @@
                 </ul>
             </div>
             <div class="footer-social-icons">
-                <div class="icon"><i class="uil uil-instagram"></i></div>
-                <div class="icon"><i class="uil uil-github-alt"></i></div>
+                <div class="icon"><a href="https://www.instagram.com/kyogrq/" target="_blank"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank"><i class="uil uil-github-alt"></i></a></div>
             </div>
             <div class="bottom-footer">
                 <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Benet Benson</a> - All rights reserved</p>
@@ -207,8 +211,8 @@
             event.preventDefault();
 
             // These IDs are obtained from your EmailJS dashboard
-            const serviceID = 'contact_service';
-            const templateID = 'contact_form';
+            const serviceID = 'YOUR_SERVICE_ID';
+            const templateID = 'YOUR_TEMPLATE_ID';
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
