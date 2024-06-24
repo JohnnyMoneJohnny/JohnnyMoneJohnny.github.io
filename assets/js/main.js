@@ -9,9 +9,6 @@ function myMenuFunction(){
   }
 }
 
-document.getElementById("hireMeBtn").addEventListener("click", function() {
-        window.location.href = "#contact";
-    });
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
 window.onscroll = function() {headerShadow()};
 
