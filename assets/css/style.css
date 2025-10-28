@@ -636,3 +636,34 @@ footer{
         width: 100%;
     }
 }
+
+
+/* ----- DARK MODE TOGGLE ICON ----- */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--text-color-second);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    color: var(--first-color);
+}
+
+/* ----- DARK MODE STYLES ----- */
+body.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+    transition: filter 0.5s ease;
+}
+
+/* Fix images and videos so they don’t invert */
+body.dark-mode img,
+body.dark-mode video,
+body.dark-mode iframe {
+    filter: invert(1) hue-rotate(180deg);
+}
